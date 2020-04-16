@@ -1,14 +1,14 @@
 import React from "react";
 import "./styles.css";
-import TodoItem from "../todoitem";
+
+import ContactCard from "./ContactCard";
 
 export default function App() {
   return (
-    <div className="Todo-list">
-      <TodoItem />
-      <TodoItem />
-      <TodoItem />
-      <TodoItem />
+    <div>
+      <ContactCard />
+      <ContactCard />
+      <ContactCard />
     </div>
   );
 }
