@@ -1,12 +1,12 @@
 import React from "react";
 
-export default function ContactCard() {
+export default function ContactCard(props) {
   return (
     <div>
-      <img src="http://placekitten.com/300/200" alt="" />
-      <h3>Mr. Whiskerson</h3>
-      <p>Phone: (212) 555-1234</p>
-      <p>Email: mr.whiskaz@catnap.meow</p>
+      <img src={props.imgUrl} alt="" />
+      <h3>{props.name}</h3>
+      <p>{props.phone}</p>
+      <p>{props.email}</p>
     </div>
   );
 }
