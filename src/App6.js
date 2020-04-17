@@ -1,18 +1,28 @@
-import React, { Component } from "react"
-import { render } from "react-dom"
+import React, { Component } from "react";
 
-export class App6 extends React.Components
-{
-constructor(){
-  super()
-  this.state={}
-}
-}
+import Conditional from "./Conditional";
 
-componentDidMount(){}
+export default class App6 extends Component {
+  constructor() {
+    super();
+    this.state = {
+      isLoading: true
+    };
+  }
 
-render(){
-  return(
-    <div>Code</div>
-  )
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        isLoading: false
+      });
+    }, 2000);
+  }
+
+  render() {
+    return (
+      <div>
+        <Conditional isLoading={this.state.isLoading} />
+      </div>
+    );
+  }
 }
