@@ -1,29 +1,13 @@
 import React from "react";
 import "./styles.css";
 
-import ContactCard from "./ContactCard";
+import Joke from "./Joke";
+import jokesData from "./JokesData";
 
 export default function App() {
-  return (
-    <div>
-      <ContactCard
-        name="Mr. Whiskerson"
-        imgUrl="http://placekitten.com/300/200"
-        phone="(212) 555-1234"
-        email="mr.whiskaz@catnap.meow"
-      />
-      <ContactCard
-        name="Fluffykins"
-        imgUrl="http://placekitten.com/400/200"
-        phone="(212) 555-2345"
-        email="fluff@me.com"
-      />
-      <ContactCard
-        name="Destroyer"
-        imgUrl="http://placekitten.com/400/300"
-        phone="(212) 555-3456"
-        email="ofworlds@yahoo.com"
-      />
-    </div>
-  );
+  const jokeComponents = jokesData.map(joke => (
+    <Joke question={joke.question} punchLine={joke.punchLine} />
+  ));
+
+  return <div>{jokeComponents}</div>;
 }
